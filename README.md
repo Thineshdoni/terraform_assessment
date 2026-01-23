@@ -44,6 +44,16 @@ Frontend/Backend → Database
 
 Monitoring → All instances
 
+📁 Module Structure
+
+The Terraform configuration is organized into reusable modules:
+
+- `modules/vpc/`: VPC, subnets, internet gateway, NAT gateway, route tables
+- `modules/security_groups/`: Security groups for public and private instances
+- `modules/ec2/`: EC2 instances for frontend, backend, database, and monitoring
+
+The root `main.tf` calls these modules to provision the infrastructure.
+
 ▶️ How to Run terraform init
 
 Initializes the Terraform working directory and downloads the required provider plugins and backend configuration.

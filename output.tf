@@ -1,7 +1,7 @@
 output "frontend_public_ip" {
-  value = aws_instance.frontend.public_ip
+  value = module.ec2.frontend_public_ip
 }
 
 output "backend_public_ip" {
-  value = aws_instance.backend.public_ip
+  value = module.ec2.backend_public_ip
 }
